@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #1DB954; /* Spotify Green */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    background-color: #1DB954;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #1aa34a;
+}
+
+img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Profile Image Styling */
+.profile-image {
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Styling for the top tracks list */
+.track-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto; /* Center the list */
+}
+
+.track-list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    position: relative; /* Position relative for pseudo-elements */
+    padding-left: 75px; /* Space for the numbering */
+}
+
+.track-list-item::before {
+    content: counter(item) ". "; /* Use counter for numbering */
+    counter-increment: item; /* Increment the counter */
+    position: absolute; /* Position it absolutely */
+    left: 0; /* Align it to the left */
+    font-weight: bold;
+    margin-right: 5px;
+    
+}
+
+.track-list-item img {
+    border-radius: 5px;
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    margin-left:10px;
+}
+
+.track-list-item .track-info {
+    text-align: left;
+}
+
+.track-list-item .track-name {
+    font-weight: bold;
+}
+
+.track-list-item .artist-name {
+    color: #666;
+}
+
+/* Initialize counter for the list */
+.track-list {
+    counter-reset: item; /* Reset the counter at the start of the list */
+}
